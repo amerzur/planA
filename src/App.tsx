@@ -1,4 +1,3 @@
-import "./App.css";
 import React, { useEffect, useState } from "react";
 import { AppBar, Container, Toolbar, Typography } from "@material-ui/core";
 import { Dashboard } from "./components/Dashboard/Dashboard";
@@ -8,6 +7,7 @@ import { Average, RequestParams } from "./common/types";
 function App() {
   const [averages, setAverages] = useState<Average[]>([]);
   useEffect(() => {
+    //Sample params
     const data: RequestParams = {
       begin: "2019-01-01",
       end: "2019-02-11",

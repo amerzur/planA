@@ -12,24 +12,24 @@ export const Dashboard:React.FC<Props> = ({averages}:Props) => {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>Average</TableCell>
               <TableCell>Product</TableCell>
               <TableCell>Country</TableCell>
               <TableCell>Start Date</TableCell>
               <TableCell>End Date</TableCell>
+              <TableCell>Average</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
               {averages.map((average,i)=>(
                   <TableRow hover key={i}>
-                 <TableCell component="th" scope="row">
-                    {average.average}
-                  </TableCell>
+                
                   <TableCell>{average.product}</TableCell>
                   <TableCell>{average.country}</TableCell> 
                    <TableCell> {average.start}</TableCell>
                    <TableCell> {average.end}</TableCell>
-                 
+                   <TableCell component="th" scope="row">
+                    {average.average}
+                  </TableCell> 
                 </TableRow>
               ))}
           </TableBody>
